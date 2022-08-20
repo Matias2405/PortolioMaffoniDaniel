@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoArgentinaComponent } from './components/logo-argentina/logo-argentina.component';
-import { SocialComponent } from './components/social/social.component';
 import { SolapaComponent } from './components/solapa/solapa.component';
 import { PrimerInfoComponent } from './components/primer-info/primer-info.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
@@ -21,7 +20,6 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     LogoArgentinaComponent,
-    SocialComponent,
     SolapaComponent,
     PrimerInfoComponent,
     ExperienciaComponent,
