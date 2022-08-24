@@ -1,4 +1,9 @@
+div{
+    background-color: black;
+}
+
 #solapa{
-    width: 100%;
-    height: 600px;
+    align-items: center;
+    width: 70%;
+    height: 500px;
 }
