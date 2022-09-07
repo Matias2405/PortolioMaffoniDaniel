@@ -1,9 +1,9 @@
 .row{
     padding: 20px;
-    color:antiquewhite
+    color:antiquewhite;
 }
 div{
-    background-color: #191e29;
+    background-color: #132d46;
     text-align: center;
 }
 /*foto personal*/
@@ -11,21 +11,21 @@ div{
 @media (min-width: 576px){
     #fotopersonal{
         position: absolute;
-        width: 15%;
+        width: 14%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
+        box-shadow: 10px 10px 30px #000000;
         left: 3%;
-        top: 600px;
+        top: 450px;
     }
 }
 @media (max-width: 575px){
     #fotopersonal{
         position: absolute;
-        width: 30%;
+        width: 25%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        left: 33%;
-        top: 950px;
+        box-shadow: 10px 10px 30px #000000;
+        left: 38%;
+        top: 840px;
     }
 }
 

@@ -1,8 +1,9 @@
 .row{
     padding: 20px;
+    color: #a1a1a1;
 }
 div{
-    background-color: white;
+    background-color: #1e1e1e;
 }
 h1, h3{
     display: inline;
