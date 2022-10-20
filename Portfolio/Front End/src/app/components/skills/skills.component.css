@@ -3,3 +3,9 @@
     padding: 20px;
     color: #696e79;
 }
+
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

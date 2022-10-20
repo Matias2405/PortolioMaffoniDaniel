@@ -1,44 +1,29 @@
 <div class="row">
     <h1>Experiencia Laboral</h1>
-    <div class="col-lg-1">
-        <img src="../../../assets/dos tomas.jpg">
+    <div class="col-lg-2">
+    <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
+        Nueva Experiencia
+    </button>    
     </div>
+    <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li>
-              <h1>Dos Tomas Producciones</h1> - <h3>(2004-2006)</h3>
-            </li>
-            <p> Edición de audio y video. Diseño de paginas web. Manejo de Adobe Photoshop,  After Effects, Flash, Corel, Dreamweaver, Avi, Adobe Premier, Media 100. </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Newsports Producciones</h1> - <h3>(2006-2008)</h3>
-            </li>
-            <p> Camarógrafo. Edición de audio y video. Programación. Diseño de paginas web. Manejo de Adobe Photoshop,  After Effects, Flash, Corel, Dreamweaver, Avi, Adobe Premier, Media 100.</p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Mercantil Andina Seguros</h1> - <h3>(2008-2014)</h3>
-            </li>
-            <p> Atención al Público. Carga, análisis, evaluación y liquidación de siniestros de automotores con/sin lesiones y otras ramas. Negociación y liquidación de siniestros extrajudiciales. Negociación con abogados. Análisis de riesgos. Control de agencias. Celebración de convenios. </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>IPS Estudio</h1> - <h3>(2015)</h3>
-            </li>
-            <p> Análisis, evaluación y liquidación de siniestros de automotores con/sin lesiones y otras ramas. Negociación y liquidación de siniestros extrajudiciales.</p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Boston Seguros</h1> - <h3>(2015-2016)</h3>
-            </li>
-            <p> Atención al Público. Carga, análisis, evaluación y liquidación de siniestros de automotores con/sin lesiones y otras ramas. Negociación y liquidación de siniestros extrajudiciales. Negociación con abogados. Análisis de riesgos. Control de agencias. Celebración de convenios. </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Seguros Rivadavia</h1> - <h3>(2016-Actualidad)</h3>
-            </li>
-            <p> Atención de productores. Administración de carteras de productores. Análisis técnico de riesgos en suscripción. Emisión de pólizas. Tareas de caja relacionadas a productores. </p>
-        </ul>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td>
+                        <h2>{{Experiencia.nombreE}}</h2>
+                    </td>
+                    <td>{{Experiencia.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                        <i class="bi bi-pen"></i>EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" (click)="delete(Experiencia.id)">
+                        <i class="bi bi-trash3"></i>BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -1,13 +1,31 @@
 <div class="row">
     <h1>Proyectos Realizados</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-me-7 col-lg-7 parte1">
-            <h1>Proyecto</h1>
-            <p>De que trata</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/APLogo.png" class="img-fluid img-proyecto">
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoproy" *ngIf="isLogged">
+            Agregar Proyecto
+        </button>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Proyectos of proyectos">
+                        <td>
+                            <h2>{{Proyectos.nombreP}}</h2>
+                        </td>
+                        <td>{{Proyectos.descripcionP}}</td>
+                        <td>{{Proyectos.fechaP}}</td>
+                        <td><a href='http://{{Proyectos.linkP}}'>{{Proyectos.linkP}}</a></td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editproy/{{Proyectos.id}}">
+                            <i class="bi bi-pen"></i>EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" (click)="borrar(Proyectos.id)">
+                            <i class="bi bi-trash3"></i>BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-
 </div>
