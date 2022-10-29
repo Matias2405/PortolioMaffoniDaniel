@@ -12,18 +12,21 @@ public class dtoExperiencia {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    private String logoE;
+    
     
     //CONSTRUCTOR 
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
+    public dtoExperiencia(String nombreE, String descripcionE, String logoE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.logoE = logoE;
     }
-    
-    //GETTERS AND SETTERS
+
+    //G AND S
 
     public String getNombreE() {
         return nombreE;
@@ -40,5 +43,15 @@ public class dtoExperiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public String getLogoE() {
+        return logoE;
+    }
+
+    public void setLogoE(String logoE) {
+        this.logoE = logoE;
+    }
+    
+    
     
 }

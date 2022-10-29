@@ -1,16 +1,15 @@
 .row{
     padding: 20px;
-    color: #000000;
-    background-color: #ffffff;
+    color: rgb(3, 185, 131);
+    background-color: black;
+    align-items: center;
+    text-align: center;
 }
 .contenedor{
     width: auto;
 }
-.parte1, .parte2{
-    display: inline-block;
-    text-align: justify;
-}
-.img-proyecto{
-    background-color: #a1b5cb;
-    box-shadow: 10px 10px 30px #000000;
+
+h2,h6,p{
+    text-align: center;
+    color: #91a76e;
 }

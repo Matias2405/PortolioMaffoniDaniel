@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
+import { Storage, ref, uploadBytes, list, getDownloadURL, listAll } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -10,8 +11,10 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 })
 export class EditExperienciaComponent implements OnInit {
   explab : Experiencia = null;
+ 
 
-  constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,private router: Router) { }
+  constructor(private storage: Storage, private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute,private router: Router) { 
+    }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];

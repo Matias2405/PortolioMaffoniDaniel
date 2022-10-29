@@ -1,16 +1,22 @@
-     <div class="row">
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img src="../../../assets/foto perfil 3.jpg" class="img-fluid" id="fotopersonal">
+     <div class="row" *ngIf="persona">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <img src="{{persona.img}}" class="img-fluid" id="fotopersonal">
         </div>
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
-            <p>Full Stack Developer Jr</p>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <h3 id="nombre">{{persona.nombre + " "}}{{persona.apellido}}</h3>
+            <p>{{persona.profesion}}</p>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-            <span>
-                <h1>Acerca de mi</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio explicabo provident quasi in? Incidunt neque, nulla nam amet, fuga nisi voluptas ipsa voluptatem accusantium rerum deleniti modi eaque, beatae eligendi!</p>
-             </span>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" descripcion>
+                <h2>Acerca de mi</h2>
+                <p>
+                    {{persona.descripcion}}
+                </p>
         </div>
+        <div >
+            <button type="button" class="btn btn-secondary" routerLink="/editprimerinfo/1" *ngIf="isLogged">
+                Editar Persona
+            </button>    
+        </div>
+        <br>
     </div>
 

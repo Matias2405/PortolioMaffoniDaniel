@@ -11,3 +11,8 @@ img{
     border-color: #01c380;
 }
 
+@media(max-width: 575px){
+    #imagensol{
+        width: 300px;
+    }
+}

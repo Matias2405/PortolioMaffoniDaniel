@@ -4,16 +4,24 @@
 }
 
 .table{
-    color:aliceblue;
+    color:#a1a1a1;
+    border-color: #1e1e1e;
 }
 div{
     background-color: #1e1e1e;
 }
-img{
-    height: 100px;
-    width: auto;
-}
-img, h1, h3{
+
+h1, h3{
     margin-top: 30px;
     display: inline;
+}
+h1{
+    color: rgb(234, 242, 250);
+}
+
+@media(max-width: 575px){
+    #fotoexp{
+        display: flex;
+        width: 300px;
+    }
 }

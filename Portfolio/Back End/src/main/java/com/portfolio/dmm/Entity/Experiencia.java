@@ -16,18 +16,20 @@ public class Experiencia {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String logoE;
     
     //CONSTRUCTOR
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, String descripcionE) {
+    public Experiencia(String nombreE, String descripcionE, String logoE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.logoE = logoE;
     }
-    
-    //GETTERS AND SETTERS
+
+    //G AND S
 
     public int getId() {
         return id;
@@ -51,6 +53,14 @@ public class Experiencia {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+
+    public String getLogoE() {
+        return logoE;
+    }
+
+    public void setLogoE(String logoE) {
+        this.logoE = logoE;
     }
     
     

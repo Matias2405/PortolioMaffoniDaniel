@@ -1,19 +1,21 @@
 <div class="row">
     <h1>Experiencia Laboral</h1>
-    <div class="col-lg-2">
-    <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
-        Nueva Experiencia
-    </button>    
-    </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
+    <div><br></div>
+    <div class="col-lg-7">
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
+                Nueva Experiencia
+            </button>    
+        </div>
         <table class="table">
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
+                    <td></td>
                     <td>
                         <h2>{{Experiencia.nombreE}}</h2>
                     </td>
                     <td>{{Experiencia.descripcionE}}</td>
+                    
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
                         <i class="bi bi-pen"></i>EDITAR</button>
@@ -25,5 +27,13 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5" >
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="https://i.pinimg.com/originals/75/2c/77/752c77382e0d28baa4f79fcf11d5c3ff.gif" width="500" id="fotoexp">
     </div>
 </div>

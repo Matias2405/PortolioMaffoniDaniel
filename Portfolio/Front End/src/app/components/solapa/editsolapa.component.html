@@ -1,0 +1,20 @@
+<div class="container" *ngIf="solapa">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class ="form-group">
+                    <label for="img">Imagen (espera la previsualizacion)</label>
+                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)"
+                    accept=".jpg, .jpeg, .png">
+                </div>
+                <div class="imagen">
+                    <img [src]="imagesolapaService.url" width="200px">
+                </div>
+                <br>
+                <button class="btn btn-success">
+                    Editar Portada
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
