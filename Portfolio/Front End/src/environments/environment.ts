@@ -13,8 +13,7 @@ export const environment = {
     messagingSenderId: '823572967861',
   },
   production: false,
-  URL:'http://localhost:8080/', 
-  //URL:'https://backendmm.herokuapp.com/'
+  URL:'http://localhost:8080/'
 };
 
 /*

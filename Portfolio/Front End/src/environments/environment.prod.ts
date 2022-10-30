@@ -8,5 +8,6 @@ export const environment = {
     authDomain: 'frontendmm-c0661.firebaseapp.com',
     messagingSenderId: '823572967861',
   },
-  production: true
+  production: true,
+  URL:'https://backendmm.herokuapp.com/'
 };
